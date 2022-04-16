@@ -1,9 +1,21 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Header = () => {
+    const { pathname } = useLocation();
+    const [isHome, setIsHome] = useState(false);
+    useEffect(() => {
+        if (pathname === '/' || pathname === '/home') {
+            setIsHome(true)
+        }
+        else {
+            setIsHome(false);
+        }
+    }, [pathname])
     return (
-        <nav className='flex justify-between items-center px-2 md:px-6 py-1 md:py-3 relative text-white'>
+        <nav className={`flex justify-between items-center px-2 md:px-6 py-1 md:py-3 relative mb-16 
+        ${isHome ? 'text-white' : 'text-black'}
+        `}>
             <div className='flex flex-col md:flex-row gap-1 md:gap-6 lg:gap-8 text-base  md:text-lg order-2 md:order-1'>
                 <NavLink to='/home'>Home</NavLink>
                 <NavLink to='/checkout'>CheckOut</NavLink>

@@ -6,7 +6,6 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import Login from './Pages/Forms/Login/Login';
 import Signup from './Pages/Forms/Signup/Signup';
 import Home from './Pages/Home/Home/Home';
-import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/login' element={<Login />}></Route>
       </Routes>
-      <Footer />
     </div>
   );
 }

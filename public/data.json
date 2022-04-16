@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Nature",
+        "image": "https://i.ibb.co/JQ6Ggp9/muradi-v-I267i-Bm2-NQ-unsplash-1-1.jpg",
+        "price": 300,
+        "description": "Shooting time 4 hour and simple photo processing."
+    },
+    {
+        "id": 2,
+        "name": "Animals",
+        "image": "https://i.ibb.co/d5sMPSV/redcharlie-xtvo0ff-GKl-I-unsplash-1.jpg",
+        "price": 800,
+        "description": "total 1 day of shooting time and Professional photo processing."
+    },
+    {
+        "id": 3,
+        "name": "Birds",
+        "image": "https://i.ibb.co/dG3pZfk/michael-schiffer-Srog-FH-yyio-uns.jpg",
+        "price": 650,
+        "description": "12 hours of shooting time, Professional photo processing and will give extra time if needed."
+    },
+    {
+        "id": 4,
+        "name": "Travel",
+        "image": "https://i.ibb.co/1Zb9B2N/devin-kaselnak-fmy-AGmsxjjc-unspl.jpg",
+        "price": 1200,
+        "description": "1200 for One day, $1800 for 2 days and Professional Photo processing included."
+    },
+    {
+        "id": 5,
+        "name": "People",
+        "image": "https://i.ibb.co/PmmnX6N/glen-hodson-Nl-HGKAZ3j-CI-unsplash-1.jpg",
+        "price": 200,
+        "description": "2 hours of shooting time and Semi professional photo processing."
+    },
+    {
+        "id": 6,
+        "name": "Short Film",
+        "image": "https://i.ibb.co/7J165z0/tudor-baciu-zq-Fkffz9-Mv4-unsplash-1.jpg",
+        "price": 900,
+        "description": "One day of shooting time and professional level editing and rendering processing."
+    }
+]
