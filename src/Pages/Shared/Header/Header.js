@@ -28,7 +28,9 @@ const Header = () => {
             <div className='flex flex-col md:flex-row gap-1 md:gap-6 lg:gap-8 text-base md:text-lg order-3 md:order-3'>
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/signup'>Signup</NavLink>
-                <NavLink to='/login' className='bg-white text-black md:py-1 md:px-2 rounded md:text-base text-center'>Login</NavLink>
+                <NavLink to='/login' className={` md:py-1 md:px-2 rounded md:text-base text-center
+                ${isHome?'bg-white text-black': 'bg-gray-500 text-white'}
+                `}>Login</NavLink>
                 {/* <button className='bg-white text-black md:py-1 md:px-2 rounded md:text-base text-center'>Logout</button> */}
             </div>
         </nav>

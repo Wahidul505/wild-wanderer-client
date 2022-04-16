@@ -10,8 +10,8 @@ const Login = () => {
             <div>
                 <h1 className='text-3xl text-teal-600 mb-8'>Login with your Account</h1>
                 <form className='mb-2'>
-                    <input className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Email' />
-                    <input className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-6' type="password" name="password" id="password" placeholder='Password' />
+                    <input className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Email' required/>
+                    <input className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-6' type="password" name="password" id="password" placeholder='Password' required/>
                     <input className='bg-teal-600 text-white text-xl w-full py-1 rounded cursor-pointer' type="submit" value="Login" />
                 </form>
                 <Link to='/signup' className='underline text-gray-600'>New to Wild Wanderer?</Link>
