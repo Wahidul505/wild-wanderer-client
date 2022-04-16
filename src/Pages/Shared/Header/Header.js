@@ -17,7 +17,7 @@ const Header = () => {
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/signup'>Signup</NavLink>
                 <NavLink to='/login' className='bg-white text-black md:py-1 md:px-2 rounded md:text-base text-center'>Login</NavLink>
-                {/* <button className='bg-white text-black px-3 py-1 rounded text-base'>Logout</button> */}
+                {/* <button className='bg-white text-black md:py-1 md:px-2 rounded md:text-base text-center'>Logout</button> */}
             </div>
         </nav>
     );
