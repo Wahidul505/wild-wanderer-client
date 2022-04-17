@@ -1,17 +1,61 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import royalBengalTiger from '../../../images/royalBengalTiger.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const [errors, setErrors] = useState({
+        emailError: "",
+        passwordError: "",
+        generalError: ""
+    })
+    const [
+        logInWithEmailAndPassword,
+        user,
+        loading,
+        loginError,
+    ] = useSignInWithEmailAndPassword(auth);
+    const handleLogin = e => {
+        e.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        logInWithEmailAndPassword(email, password);
+    }
+    useEffect(() => {
+        if (loginError) {
+            switch (loginError.code) {
+                case "auth/user-not-found":
+                    setErrors({ ...errors, emailError: "Invalid Email Address" })
+                    break;
+                case "auth/wrong-password":
+                    setErrors({ ...errors, passwordError: "Wrong Password" })
+                    break;
+                default:
+                    setErrors({ ...errors, generalError: "Something went wrong" });
+                    break;
+            }
+        }
+        if (user) {
+            setErrors({ emailError: "", passwordError: "", generalError: "" });
+            navigate('/');
+        }
+    }, [loginError, errors, user, navigate]);
     return (
         <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto'>
             <img className='w-full h-5/6 rounded opacity-80' src={royalBengalTiger} alt="" />
             <div>
                 <h1 className='text-3xl text-teal-600 mb-8'>Login with your Account</h1>
-                <form className='mb-2'>
-                    <input className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Email' required/>
-                    <input className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-6' type="password" name="password" id="password" placeholder='Password' required/>
+                <form onSubmit={handleLogin} className='mb-2'>
+                    <input ref={emailRef} className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Email' required />
+                    {errors?.emailError && <p className='text-rose-600'>{errors?.emailError}</p>}
+                    <input ref={passwordRef} className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-6' type="password" name="password" id="password" placeholder='Password' required />
+                    {errors?.passwordError && <p className='text-rose-600'>{errors?.passwordError}</p>}
+                    {errors?.generalError && <p className='text-rose-600'>{errors?.generalError}</p>}
                     <input className='bg-teal-600 text-white text-xl w-full py-1 rounded cursor-pointer' type="submit" value="Login" />
                 </form>
                 <Link to='/signup' className='underline text-gray-600'>New to Wild Wanderer?</Link>
