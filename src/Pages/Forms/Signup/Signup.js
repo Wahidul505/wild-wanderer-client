@@ -18,7 +18,7 @@ const Signup = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
+         ,
         createUserError,
     ] = useCreateUserWithEmailAndPassword(auth);
     const handleSignup = e => {

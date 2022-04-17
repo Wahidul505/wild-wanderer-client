@@ -7,7 +7,7 @@ import auth from '../../../firebase.init';
 const Header = () => {
     const { pathname } = useLocation();
     const [isHome, setIsHome] = useState(false);
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     useEffect(() => {
         if (pathname === '/' || pathname === '/home') {
             setIsHome(true)

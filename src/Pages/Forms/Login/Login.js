@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import royalBengalTiger from '../../../images/royalBengalTiger.jpg';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
 const Login = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const [errors, setErrors] = useState({
@@ -17,7 +19,7 @@ const Login = () => {
     const [
         logInWithEmailAndPassword,
         user,
-        loading,
+        ,
         loginError,
     ] = useSignInWithEmailAndPassword(auth);
     const handleLogin = e => {
@@ -42,9 +44,9 @@ const Login = () => {
         }
         if (user) {
             setErrors({ emailError: "", passwordError: "", generalError: "" });
-            navigate('/');
+            navigate(from, { replace: true });
         }
-    }, [loginError, errors, user, navigate]);
+    }, [loginError, errors, user, navigate, from]);
     return (
         <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto'>
             <img className='w-full h-5/6 rounded opacity-80' src={royalBengalTiger} alt="" />
