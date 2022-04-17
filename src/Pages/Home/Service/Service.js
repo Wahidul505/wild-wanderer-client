@@ -13,7 +13,7 @@ const Service = ({ service }) => {
                 <p className='text-lg'>{description}</p>
                 <button
                     onClick={() => navigate('/checkout')}
-                    className='bg-white bg-opacity-70 text-gray-500 rounded px-3 py-1 text-lg'>book</button>
+                    className='bg-white bg-opacity-80 text-gray-500 rounded px-3 py-1 text-lg'>book</button>
             </div>
         </div>
     );

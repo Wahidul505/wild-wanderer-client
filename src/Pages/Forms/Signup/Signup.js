@@ -19,9 +19,9 @@ const Signup = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-         ,
+        ,
         createUserError,
-    ] = useCreateUserWithEmailAndPassword(auth, sendEmailVerification);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const handleSignup = e => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -54,7 +54,7 @@ const Signup = () => {
         }
     }, [createUserError, errors, user, navigate]);
     return (
-        <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto'>
+        <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto mb-8'>
             <img className='w-full h-5/6 rounded' src={elephant} alt="" />
             <div>
                 <h1 className='text-3xl text-teal-600 mb-8'>Create an Account</h1>
