@@ -13,7 +13,7 @@ const Header = () => {
         }
     }, [pathname])
     return (
-        <nav className={`flex justify-between items-center px-2 md:px-6 py-1 md:py-3 relative mb-16 
+        <nav className={`flex justify-between items-center px-2 md:px-6 py-1 md:py-2 relative mb-16 
         ${isHome ? 'text-white' : 'text-black'}
         `}>
             <div className='flex flex-col md:flex-row gap-1 md:gap-6 lg:gap-8 text-base  md:text-lg order-2 md:order-1'>
