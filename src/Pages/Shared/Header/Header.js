@@ -33,7 +33,7 @@ const Header = () => {
                 <h2 className='text-lg md:text-xl'>Wanderer</h2>
             </div>
             <div className='flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base md:text-lg order-3 md:order-3'>
-                <NavLink to='/checkout'>CHECK OUT</NavLink>
+                <NavLink to='/checkout/service'>CHECK OUT</NavLink>
                 {
                     user ?
                         <button onClick={handleLogout} className={` md:py-1 md:px-2 rounded md:text-base text-center
