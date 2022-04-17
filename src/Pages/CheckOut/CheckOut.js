@@ -10,7 +10,7 @@ const CheckOut = () => {
         toast.success('Thank You For The Booking 😊');
     }
     return (
-        <div className='checkout w-2/3 md:w-1/3 mx-auto rounded p-4 mb-10'>
+        <div className='checkout w-2/3 md:w-1/2 lg:w-2/5 mx-auto rounded p-4 mb-10'>
             <Toaster
                 position="top-center"
                 reverseOrder={false}
