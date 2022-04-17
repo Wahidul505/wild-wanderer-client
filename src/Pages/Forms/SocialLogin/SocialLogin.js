@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { BsFacebook } from 'react-icons/bs';
 import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -10,8 +10,8 @@ const SocialLogin = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-    const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
+    const [signInWithGoogle, googleUser, , googleError] = useSignInWithGoogle(auth);
+    const [signInWithFacebook, fbUser, , fbError] = useSignInWithFacebook(auth);
     const handleGoogleLogin = () => {
         signInWithGoogle();
     }

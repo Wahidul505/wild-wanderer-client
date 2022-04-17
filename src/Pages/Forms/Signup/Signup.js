@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import elephant from '../../../images/elephant.jpg'
+import elephant from '../../../images/elephant.jpg';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Signup = () => {
         user,
          ,
         createUserError,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, sendEmailVerification);
     const handleSignup = e => {
         e.preventDefault();
         const email = emailRef.current.value;

@@ -23,16 +23,16 @@ const Header = () => {
         <nav className={`flex justify-between items-center px-2 md:px-6 py-1 md:py-2 relative mb-16 
         ${isHome ? 'text-white' : 'text-black'}
         `}>
-            <div className='flex flex-col md:flex-row gap-1 md:gap-6 lg:gap-8 text-base  md:text-lg order-2 md:order-1'>
+            <div className='flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base  md:text-xl order-2 md:order-1'>
                 <NavLink to='/home'>Home</NavLink>
                 <NavLink to='/checkout'>CheckOut</NavLink>
                 <NavLink to='/blogs'>Blogs</NavLink>
             </div>
             <div className='text-center order-1 md:order-2'>
-                <h1 className='text-3xl font-serif'>Wild</h1>
-                <h2 className='text-xl'>Wanderer</h2>
+                <h1 className='text-2xl md:text-3xl font-serif'>Wild</h1>
+                <h2 className='text-lg md:text-xl'>Wanderer</h2>
             </div>
-            <div className='flex flex-col md:flex-row gap-1 md:gap-6 lg:gap-8 text-base md:text-lg order-3 md:order-3'>
+            <div className='flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base md:text-xl order-3 md:order-3'>
                 <NavLink to='/about'>About</NavLink>
                 {
                     user ?

@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
 import Services from '../Services/Services';
+import Works from '../Works/Works';
 import './Home.css';
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
             <div id='services'>
                 <Services />
             </div>
+            <Works />
             <Footer />
         </div>
     );
