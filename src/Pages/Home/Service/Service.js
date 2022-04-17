@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
-    const { name, image, price, description, id } = service;
+    const { name, image, price, description } = service;
     const navigate = useNavigate();
     return (
         <div className='relative text-gray-900'>
@@ -12,8 +12,8 @@ const Service = ({ service }) => {
                 <p className='text-2xl'>${price}</p>
                 <p className='text-lg border border-gray-800 rounded h-20  md:h-28 lg:h-24 px-1 overflow-hidden'>{description}</p>
                 <button
-                    onClick={() => navigate(`/checkout/${id}`)}
-                    className='bg-white bg-opacity-80 text-gray-500 rounded px-3 py-1 text-lg'>book</button>
+                    onClick={() => navigate(`/checkout/${name}`)}
+                    className='bg-white text-gray-800 rounded px-3 py-1 text-lg'>book</button>
             </div>
         </div>
     );
