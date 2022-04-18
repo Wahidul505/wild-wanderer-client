@@ -12,29 +12,35 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    // state for errors to display 
     const [errors, setErrors] = useState({
         emailError: "",
         passwordError: "",
         generalError: ""
     })
+    // react-firebase-hook to signing a user 
     const [
         logInWithEmailAndPassword,
         user,
         ,
         loginError,
     ] = useSignInWithEmailAndPassword(auth);
+    // react-firebase-hook to send password reset email 
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    // handling login function
     const handleLogin = e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         logInWithEmailAndPassword(email, password);
     };
+    // handling reset password function 
     const handleResetPassword = async () => {
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email);
         toast.success('Reset Password Email Sent', { id: 'reset' });
     };
+    // handling conditions 
     useEffect(() => {
         if (loginError) {
             switch (loginError.code) {
@@ -49,6 +55,7 @@ const Login = () => {
                     break;
             }
         }
+        // checking if the user is logged in to redirect to the previous page 
         if (user) {
             setErrors({ emailError: "", passwordError: "", generalError: "" });
             navigate(from, { replace: true });

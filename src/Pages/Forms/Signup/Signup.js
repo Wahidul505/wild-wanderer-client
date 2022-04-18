@@ -4,24 +4,26 @@ import elephant from '../../../images/elephant.jpg';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { sendEmailVerification } from 'firebase/auth';
 
 const Signup = () => {
     const navigate = useNavigate();
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const confirmPasswordRef = useRef('');
+    // state to display errors 
     const [errors, setErrors] = useState({
         emailError: "",
         passwordError: "",
         generalError: ""
     })
+    // react-firebase-hook for creating a user 
     const [
         createUserWithEmailAndPassword,
         user,
         ,
         createUserError,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    // signup function 
     const handleSignup = e => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -34,6 +36,7 @@ const Signup = () => {
         setErrors({ ...errors, passwordError: "" });
         createUserWithEmailAndPassword(email, password);
     }
+    // handling conditions
     useEffect(() => {
         if (createUserError) {
             switch (createUserError.code) {

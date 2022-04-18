@@ -18,13 +18,13 @@ const CheckOut = () => {
             <h1 className='text-white text-2xl text-center'>Book for <span className='text-amber-300'>{serviceName}</span> Photography Package</h1>
             <form onSubmit={handleCheckOut} className='my-8'>
                 <label className='text-white text-lg' htmlFor="name">Your Name</label>
-                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-3' type="text" name="name" id="name" placeholder='Name' />
+                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-3' type="text" name="name" id="name" placeholder='Name' required />
                 <label className='text-white text-lg' htmlFor="email">Your Email Address</label>
-                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Your Email' />
+                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Your Email' required />
                 <label className='text-white text-lg' htmlFor="address">Your Address</label>
-                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-3' type="text" name="address" id="address" placeholder='Address' />
+                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-3' type="text" name="address" id="address" placeholder='Address' required />
                 <label className='text-white text-lg' htmlFor="phone">Your Phone Number</label>
-                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-10' type="text" name="phone" id="phone" placeholder='Phone Number' />
+                <input className='w-full bg-gray-200 p-1 rounded text-lg focus:outline-none mb-10' type="text" name="phone" id="phone" placeholder='Phone Number' required />
                 <input className='bg-teal-700 text-white py-1 w-full rounded text-xl cursor-pointer hover:text-teal-700 hover:bg-gray-300' type="submit" value="CheckOut" />
             </form>
         </div>
