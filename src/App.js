@@ -11,7 +11,7 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div>
+    <div className='mb-20'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>

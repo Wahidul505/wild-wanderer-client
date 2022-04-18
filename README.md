@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# WILD WANDERER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Wild Wanderer](https://wild-wanderer-b161c.web.app/)
 
-## Available Scripts
+Click here to visit the website: [https://wild-wanderer-b161c.web.app/](https://wild-wanderer-b161c.web.app/)
 
-In the project directory, you can run:
+## Web Features and functionalities:
+* This website is about an independent service provider as a wild photographer who provides different sort of wild photography.
+* A user can Sign up in this website if new and not have to login every time after visiting the website.
+* The home section of this web contains the different services provides by the photographer, the works of the photographer, a footer which contains social links and copyright collection and an Elegant banner of lion.
+* For log in, sign up and checkout this web has three different sections in three different routes.
+* While a user is logged in to the website a logout button will appear in the header and the user can logout anytime the user want.
+* The CheckOut route is a private route, to access that route a user have to create an account in to the website and should stay logged in.
+* There are also an about and a blogs section, which contains the goals that the developer determined with and the answers of the questions that the developer asked for, respectively.
+* And the website is user friendly. A user can toggle between login and signUp route. And also in the navbar, the user can see which route is currently active.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## List of technologies user in this project:
+* This web is build with REACT, which is a javascript library.
+* This web provides firebase authentication system.
+* Also this web is hosting live through firebase ([Here's the link](https://wild-wanderer-b161c.web.app/))
+* To style this web I used tailwind css framework.
+* For authentication I used react-firebase-hooks.
+* I used react-hot-toast to implement toast in different actions of the user.
+* I used react-icons to use icons.

@@ -60,7 +60,7 @@ const Login = () => {
                 position="top-center"
                 reverseOrder={false}
             />
-            <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto mb-8'>
+            <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto'>
                 <img className='w-full h-5/6 rounded opacity-80' src={tiger} alt="" />
                 <div>
                     <h1 className='text-3xl text-teal-600 mb-8'>Login with your Account</h1>

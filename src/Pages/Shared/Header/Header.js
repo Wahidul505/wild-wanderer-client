@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import './Header.css';
 
 const Header = () => {
     const { pathname } = useLocation();
@@ -23,7 +24,7 @@ const Header = () => {
         <nav className={`flex justify-between items-center px-2 md:px-6 py-1 md:py-2 relative mb-16 
         ${isHome ? 'text-white' : 'text-black'}
         `}>
-            <div className='flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base  md:text-lg order-2 md:order-1'>
+            <div className='flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base md:text-lg order-2 md:order-1'>
                 <NavLink to='/home'>HOME</NavLink>
                 <NavLink to='/about'>ABOUT ME</NavLink>
                 <NavLink to='/blogs'>BLOGS</NavLink>
