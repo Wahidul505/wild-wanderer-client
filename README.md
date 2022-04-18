@@ -14,7 +14,7 @@ Click here to visit the website: [https://wild-wanderer-b161c.web.app/](https://
 * There are also an about and a blogs section, which contains the goals that the developer determined with and the answers of the questions that the developer asked for, respectively.
 * And the website is user friendly. A user can toggle between login and signUp route. And also in the navbar, the user can see which route is currently active.
 
-## List of technologies user in this project:
+## List of technologies used in this project:
 * This web is build with REACT, which is a javascript library.
 * This web provides firebase authentication system.
 * Also this web is hosting live through firebase ([Here's the link](https://wild-wanderer-b161c.web.app/))
