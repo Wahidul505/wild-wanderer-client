@@ -43,7 +43,6 @@ const Header = () => {
             <div className={`flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base md:text-lg order-3 md:order-3 mr-16 md:mr-0 md:translate-y-0
             ${show ? 'translate-y-0 transition-transform ease-linear duration-300' : '-translate-y-40 transition-transform ease-linear duration-300'}
             `}>
-                <NavLink to='/checkout/service'>CHECK OUT</NavLink>
                 {
                     user ?
                         <button onClick={handleLogout} className={` md:py-1 md:px-2 rounded md:text-base text-center

@@ -2,11 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import elephant from '../../../images/elephant.jpg';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
 const Signup = () => {
     const navigate = useNavigate();
+    const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const confirmPasswordRef = useRef('');
@@ -23,9 +24,12 @@ const Signup = () => {
         ,
         createUserError,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    // react-firebase-hook for updating user name 
+    const [updateProfile] = useUpdateProfile(auth);
     // signup function 
-    const handleSignup = e => {
+    const handleSignup = async e => {
         e.preventDefault();
+        const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         const confirmPassword = confirmPasswordRef.current.value;
@@ -34,7 +38,8 @@ const Signup = () => {
             return;
         }
         setErrors({ ...errors, passwordError: "" });
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
     }
     // handling conditions
     useEffect(() => {
@@ -62,6 +67,7 @@ const Signup = () => {
             <div>
                 <h1 className='text-3xl text-teal-600 mb-8'>Create an Account</h1>
                 <form onSubmit={handleSignup} className='mb-2'>
+                    <input ref={nameRef} className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="text" name="name" id="name" placeholder='Name' required />
                     <input ref={emailRef} className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="email" name="email" id="email" placeholder='Email' required />
                     <input ref={passwordRef} className='w-full border-b-2 border-gray-500 p-1 text-lg focus:outline-none mb-3' type="password" name="password" id="password" placeholder='Password' required />
                     {errors?.passwordError && <p className='text-rose-600'>{errors?.passwordError}</p>}
