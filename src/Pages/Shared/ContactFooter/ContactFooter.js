@@ -4,7 +4,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { FaPinterestP } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
 
-const Footer = () => {
+const ContactFooter = () => {
     const date = new Date();
     const year = date.getFullYear();
     return (
@@ -28,4 +28,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default ContactFooter;

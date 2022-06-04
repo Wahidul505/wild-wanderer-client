@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
 import Services from '../Services/Services';
 import Works from '../Works/Works';
 import './Home.css';
@@ -16,7 +15,6 @@ const Home = () => {
                 <h1 className='text-center text-white text-3xl py-52'>I CREATE MAGIC FROM SIMPLE THINGS</h1>
             </div>
             <Works />
-            <Footer />
         </div>
     );
 };
