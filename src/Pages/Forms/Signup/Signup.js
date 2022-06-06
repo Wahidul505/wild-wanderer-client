@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import elephant from '../../../images/elephant.jpg';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
@@ -63,7 +62,7 @@ const Signup = () => {
     }, [createUserError, errors, user, navigate]);
     return (
         <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto'>
-            <img className='w-full h-5/6 rounded' src={elephant} alt="" />
+            <img className='w-full h-5/6 rounded' src="https://i.ibb.co/h1yv2T4/elephant.jpg" alt="" />
             <div>
                 <h1 className='text-3xl text-teal-600 mb-8'>Create an Account</h1>
                 <form onSubmit={handleSignup} className='mb-2'>

@@ -1,8 +1,4 @@
 import React from 'react';
-import elephant2 from '../../../images/elephant2.jpg';
-import nature from '../../../images/nature.jpg';
-import lion from '../../../images/lion.jpg';
-import birds from '../../../images/birds.jpg';
 import Heading from '../../Shared/Heading/Heading';
 
 const Works = () => {
@@ -17,7 +13,7 @@ const Works = () => {
                     data-aos-delay="500"
                     data-aos-duration="1000"
                     className='relative'>
-                    <img className='w-full rounded' src={elephant2} alt="" />
+                    <img className='w-full rounded' src="https://i.ibb.co/h13X40M/elephant2.jpg" alt="" />
                     <div className='absolute right-0 left-0 bottom-0 h-full flex justify-center items-center'>
                         <h1 className='w-5/6 h-5/6 bg-black bg-opacity-40 flex justify-center items-center rounded'>Animal</h1>
                     </div>
@@ -27,7 +23,7 @@ const Works = () => {
                     data-aos-delay="500"
                     data-aos-duration="1000"
                     className='relative row-span-2'>
-                    <img className='w-full rounded' src={nature} alt="" />
+                    <img className='w-full rounded' src="https://i.ibb.co/S55zH7B/nature.jpg" alt="" />
                     <div className='absolute right-0 left-0 bottom-0 h-full flex justify-center items-center'>
                         <h1 className='w-5/6 h-5/6 m-auto bg-black bg-opacity-40 flex justify-center items-center rounded'>Nature</h1>
                     </div>
@@ -37,7 +33,7 @@ const Works = () => {
                     data-aos-delay="700"
                     data-aos-duration="1200"
                     className='relative row-span-2'>
-                    <img className='w-full rounded' src={lion} alt="" />
+                    <img className='w-full rounded' src="https://i.ibb.co/TTKFSWv/lion.jpg" alt="" />
                     <div className='absolute right-0 left-0 bottom-0 h-full flex justify-center items-center'>
                         <h1 className='w-5/6 h-5/6 m-auto bg-black bg-opacity-40 flex justify-center items-center rounded'>Wild Life</h1>
                     </div>
@@ -47,7 +43,7 @@ const Works = () => {
                     data-aos-delay="700"
                     data-aos-duration="1500"
                     className='relative'>
-                    <img className='w-full rounded' src={birds} alt="" />
+                    <img className='w-full rounded' src="https://i.ibb.co/55Yn75B/birds.jpg" alt="" />
                     <div className='absolute right-0 left-0 bottom-0 h-full flex justify-center items-center'>
                         <h1 className='w-5/6 h-5/6 m-auto bg-black bg-opacity-40 flex justify-center items-center rounded'>Birds</h1>
                     </div>

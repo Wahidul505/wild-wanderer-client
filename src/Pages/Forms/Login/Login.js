@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import tiger from '../../../images/tiger.jpg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
@@ -68,7 +67,7 @@ const Login = () => {
                 reverseOrder={false}
             />
             <div className='grid md:grid-cols-2 gap-6 w-11/12 mx-auto'>
-                <img className='w-full h-5/6 rounded opacity-80' src={tiger} alt="" />
+                <img className='w-full h-5/6 rounded opacity-80' src="https://i.ibb.co/1bznhmx/tiger.jpg" alt="" />
                 <div>
                     <h1 className='text-3xl text-teal-600 mb-8'>Login with your Account</h1>
                     <form onSubmit={handleLogin} className='mb-2'>

@@ -12,7 +12,7 @@ const CheckOut = ({ date }) => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${id}`)
+        fetch(`https://wild-wanderer.herokuapp.com/service/${id}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [id]);
@@ -27,7 +27,7 @@ const CheckOut = ({ date }) => {
         };
         console.log(bookingInfo);
         console.log(service);
-        fetch('http://localhost:5000/service', {
+        fetch('https://wild-wanderer.herokuapp.com/service', {
             headers: {
                 'content-type': 'application/json'
             },
