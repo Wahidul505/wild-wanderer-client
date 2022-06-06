@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Heading from '../../Shared/Heading/Heading';
 import Service from '../Service/Service';
 
 const Services = () => {
@@ -9,8 +10,8 @@ const Services = () => {
             .then(data => setServices(data));
     }, [])
     return (
-        <div className='w-10/12 md:w-11/12 mx-auto mt-20'>
-            <h1 className='text-center text-3xl text-gray-500 mb-6'>I SHOOT</h1>
+        <div className='-mt-12'>
+            <Heading>I Shoot</Heading>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {
                 services.map(service => <Service

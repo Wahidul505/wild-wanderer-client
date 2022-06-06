@@ -2,17 +2,21 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
 import Works from '../Works/Works';
-import './Home.css';
 
 const Home = () => {
     return (
-        <div className='home absolute top-0 -z-10 right-0 left-0'>
+        <div className='flex flex-col gap-32'>
             <Banner />
             <div id='services'>
                 <Services />
             </div>
-            <div className='parallax w-full h-full bg-no-repeat bg-cover bg-fixed my-20 bg-center'>
-                <h1 className='text-center text-white text-3xl py-52'>I CREATE MAGIC FROM SIMPLE THINGS</h1>
+            <div
+                style={{
+                    fontFamily: "'Parisienne', cursive",
+                    backgroundImage: "url('https://i.ibb.co/0QmnxcH/alessandro-sacchi-NUFnf-Yd09i-I-unsplash.jpg')"
+                }}
+                className='h-full bg-no-repeat bg-cover bg-fixed bg-bottom -mx-12 px-10'>
+                <h1 className='text-center text-white text-4xl md:text-6xl py-52'>Wild Wanderer</h1>
             </div>
             <Works />
         </div>

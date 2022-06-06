@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='text-xl leading-8 font-sans text-slate-900 w-10/12 mx-auto'>
+        <div className='text-xl leading-8 font-sans text-slate-900'>
             <h1 className='text-3xl text-black mb-2'>Difference Between Authentication and Authorization?</h1>
             <p>• Authentication means validating someones credential to verify that person's identity. In another words, Authentication is the process of verifying someone's identity before that person act something. As example: A logged in or signed up user completed the Authentication process as the website Authenticated the user by creating a account of the user.</p>
             <p>• Authorization means giving access to some particular parts/works/recourses. In another words, whether a Authenticated user has the permission to access any particular work/recourses is determined by Authorization. As example: A user can access the websites private routes/resources after logged in or buying premium packages of the website.</p>

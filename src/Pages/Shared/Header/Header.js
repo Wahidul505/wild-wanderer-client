@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Header.css';
 import { IoIosMenu } from 'react-icons/io';
@@ -48,7 +48,7 @@ const Header = () => {
     </>
 
     return (
-        <nav className={`flex justify-between items-center px-2 md:px-6 py-1 md:py-2 relative mb-16 overflow-hidden h-36 md:h-16
+        <nav className={`flex justify-between py-1 md:py-2 relative overflow-hidden h-36 md:h-20
         ${isHome ? 'text-white' : 'text-black'}
         `}>
             <div className={`flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base md:text-lg order-2 md:order-1 md:translate-y-0 z-10
@@ -57,15 +57,17 @@ const Header = () => {
                 <NavLink to='/home'>HOME</NavLink>
                 <NavLink to='/about'>ABOUT ME</NavLink>
                 <NavLink to='/blogs'>BLOGS</NavLink>
-                <div className='flex flex-col md:hidden z-10'>
+                <div className='flex flex-col md:hidden z-10 h-fit'>
                     {userAuth}
                 </div>
             </div>
-            <div className='absolute top-0 right-0 left-0 w-screen text-center'>
-                <h1 className='text-2xl md:text-3xl font-serif'>Wild</h1>
-                <h2 className='text-lg md:text-xl'>Wanderer</h2>
+            <div
+                style={{ fontFamily: "'Yeseva One', cursive" }}
+                className='absolute top-1 w-full text-center'>
+                <h1 className='text-2xl md:text-5xl mb-0'><Link to='/'>Wild</Link></h1>
+                <h2 className='text-lg md:text-2xl mt-0'><Link to='/'>Wanderer</Link></h2>
             </div>
-            <div className='hidden md:flex gap-8 text-lg order-3 mr-16 md:mr-0 z-10'>
+            <div className='hidden md:flex gap-8 text-lg order-3 mr-16 md:mr-0 z-10 h-fit'>
                 {userAuth}
             </div>
             <button onClick={() => setShow(!show)} className='absolute right-3 top-2 md:hidden text-3xl'>
