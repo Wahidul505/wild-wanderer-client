@@ -12,23 +12,20 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div className='max-w-screen-2xl px-12'>
+    <div className='max-w-screen-2xl px-4 md:px-8 lg:px-12'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/bookService/:id' element={
-          <RequireAuth>
-            <BookService />
-          </RequireAuth>
-        }></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/about' element={<AboutMe />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route element={<RequireAuth />}>
+          <Route path='/book-service/:id' element={<BookService />} />
+        </Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
-      <ContactFooter/>
+      <ContactFooter />
     </div>
   );
 }

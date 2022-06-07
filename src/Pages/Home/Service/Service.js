@@ -13,7 +13,7 @@ const Service = ({ service }) => {
                 <p className='text-2xl'>${price}</p>
                 <p title={description} className='hidden md:block text-lg border border-gray-800 rounded h-20  md:h-28 lg:h-24 px-1 overflow-hidden'>{description}</p>
                 <button
-                    onClick={() => navigate(`/bookService/${_id}`)}
+                    onClick={() => navigate(`/book-service/${_id}`)}
                     className='bg-white text-gray-800 font-medium font-mono rounded px-3 py-1 text-lg transition ease-in-out delay-150 hover:scale-110 duration-300'
                     >Book</button>
                 </div>

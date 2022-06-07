@@ -54,7 +54,7 @@ const Header = () => {
             <div className={`flex flex-col md:flex-row gap-0 md:gap-6 lg:gap-8 text-base md:text-lg order-2 md:order-1 md:translate-y-0 z-10
             ${show ? 'translate-y-0 transition-transform ease-linear duration-300' : '-translate-y-40 transition-transform ease-linear duration-300'}
             `}>
-                <NavLink to='/home'>HOME</NavLink>
+                <NavLink to='/'>HOME</NavLink>
                 <NavLink to='/about'>ABOUT ME</NavLink>
                 <NavLink to='/blogs'>BLOGS</NavLink>
                 <div className='flex flex-col md:hidden z-10 h-fit'>
