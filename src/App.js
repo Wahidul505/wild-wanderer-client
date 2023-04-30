@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import AboutMe from './Pages/AboutMe/AboutMe';
 import Blogs from './Pages/Blogs/Blogs';
 import BookService from './Pages/BookService/BookService';
 import Login from './Pages/Forms/Login/Login';
@@ -17,7 +16,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
-        <Route path='/about' element={<AboutMe />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route element={<RequireAuth />}>

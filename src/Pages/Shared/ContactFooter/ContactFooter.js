@@ -15,7 +15,6 @@ const ContactFooter = () => {
             </div>
             <div className='flex flex-col md:flex-row justify-center gap-4 md:gap-10 text-sm mb-10'>
                 <Link to='/home'>HOME</Link>
-                <Link to='/about'>ABOUT ME</Link>
                 <Link to='/blogs'>BLOGS</Link>
             </div>
             <div className='flex justify-center gap-10 text-base mb-10'>
